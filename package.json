@@ -1,6 +1,6 @@
 {
   "name": "clib-create",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create a `clib` skeleton",
   "keywords": [
     "c",
