@@ -10,21 +10,19 @@
 ## Usage
 
 ```bash
-$ clib create 
-name: popover
-description: Popover UI component
-does this component have js? yes
-does this component have css? yes
-does this component have html? yes
-
-     create : popover
-     create : popover/index.js
-     create : popover/template.html
-     create : popover/popover.css
-     create : popover/Makefile
-     create : popover/Readme.md
-     create : popover/.gitignore
-     create : popover/component.json
+$ clib-create
+name:  somelib
+repo:  stephenmathieson/somelib
+email:  me@stephenmathieson.com
+author:  Stephen Mathieson
+description:  Some lib that does stuff
+wrote: History.md
+wrote: Makefile
+wrote: package.json
+wrote: Readme.md
+wrote: test.c
+wrote: src/somelib.c
+wrote: src/somelib.h
 ```
 
 ## License 
