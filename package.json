@@ -1,8 +1,12 @@
 {
   "name": "clib-create",
-  "version": "0.0.0",
-  "description": "",
-  "keywords": [],
+  "version": "0.0.1",
+  "description": "Create a `clib` skeleton",
+  "keywords": [
+    "c",
+    "clib",
+    "skeleton"
+  ],
   "author": "Stephen Mathieson <me@stephenmathieson.com>",
   "repository": {
     "type": "git",
