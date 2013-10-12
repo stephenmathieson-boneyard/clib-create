@@ -1,0 +1,8 @@
+
+#include <assert.h>
+#include "src/{name}.h"
+
+int main(int argc, char **argv) {
+
+  return 0;
+}

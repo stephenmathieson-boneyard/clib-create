@@ -1,0 +1,15 @@
+
+//
+// {name}.h
+//
+// Copyright (c) {year} {author}
+// MIT licensed
+//
+
+
+#ifndef {NAME}
+#define {NAME}
+
+
+
+#endif

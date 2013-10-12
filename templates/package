@@ -1,0 +1,12 @@
+{
+  "name": "{name}",
+  "version": "0.0.1",
+  "repo": "{repo}",
+  "description": "{desc}",
+  "keywords": [],
+  "license": "MIT",
+  "src": [
+    "src/{name}.c",
+    "src/{name}.h"
+  ]
+}

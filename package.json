@@ -1,0 +1,31 @@
+{
+  "name": "clib-create",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "Stephen Mathieson <me@stephenmathieson.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stephenmathieson/clib-create.git"
+  },
+  "dependencies": {
+    "mkdirp": "~0.3.5",
+    "is-email": "~0.1.1",
+    "prompt": "git://github.com/Olegas/prompt#6b91caf"
+  },
+  "devDependencies": {
+    "better-assert": "~1.0.0",
+    "rimraf": "~2.2.2"
+  },
+  "main": "index.js",
+  "bin": {
+    "clib-create": "bin.js"
+  },
+  "bugs": {
+    "url": "https://github.com/stephenmathieson/clib-create/issues"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "license": "MIT"
+}
