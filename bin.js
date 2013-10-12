@@ -7,9 +7,9 @@ var create = require('./');
 var schema = {
   properties: {
     name: {
-      pattern: /^[a-z\-\d]+$/i,
+      pattern: /^[a-z\-\d\.]+$/i,
       // idk why
-      message: 'Name must be only letters, numbers or dashes',
+      message: 'Name must only contain letters, numbers, dashes, or periods',
       required: true
     },
     repo: {
