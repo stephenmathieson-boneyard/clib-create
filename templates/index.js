@@ -35,7 +35,22 @@ function template(data, conf) {
     .replace(/\{desc\}/g, conf.desc)
     .replace(/\{email\}/g, conf.email)
     .replace(/\{name\}/g, conf.name)
-    .replace(/\{NAME\}/g, conf.name.toUpperCase())
+    .replace(/\{NAME\}/g, guard(conf.name))
     .replace(/\{repo\}/g, conf.repo)
     .replace(/\{year\}/g, d.getFullYear());
+}
+
+/**
+ * Create a valid header guard from `name`
+ *
+ * @api private
+ * @param {String} name
+ * @return {String}
+ */
+
+function guard(name) {
+  return name
+    .toUpperCase()
+    .replace(/\-/g, '_')
+    .replace(/\./g, '_');
 }
