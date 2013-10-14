@@ -18,6 +18,7 @@ rimraf.sync(__dirname + '/fixture');
 create(__dirname + '/fixture', conf, function (err, dir) {
   if (err) throw err;
   assert(__dirname + '/fixture/test' === dir);
+  assert(exists(__dirname + '/fixture/test/.gitignore'));
   assert(exists(__dirname + '/fixture/test/History.md'));
   assert(exists(__dirname + '/fixture/test/Makefile'));
   assert(exists(__dirname + '/fixture/test/package.json'));

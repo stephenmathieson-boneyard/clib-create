@@ -9,6 +9,7 @@ var package = read(__dirname + '/package');
 var readme = read(__dirname + '/readme');
 var source = read(__dirname + '/source');
 var test = read(__dirname + '/test');
+var gitignore = read(__dirname + '/gitignore');
 
 exports.header = template.bind(null, header);
 exports.history = template.bind(null, history);
@@ -17,6 +18,7 @@ exports.package = template.bind(null, package);
 exports.readme = template.bind(null, readme);
 exports.source = template.bind(null, source);
 exports.test = template.bind(null, test);
+exports.gitignore = template.bind(null, gitignore);
 
 /**
  * Template `data` with `conf`

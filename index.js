@@ -10,12 +10,17 @@ function create(dir, conf, cb) {
   dir = path.join(dir, conf.name);
   var files = [];
 
-  mkdir(path.join(dir, 'src'), history);
+  mkdir(path.join(dir, 'src'), gitignore);
 
   function write(file, key, next) {
     var data = templates[key](conf);
     files.push(file);
     fs.writeFile(path.join(dir, file), data, next);
+  }
+
+  function gitignore(err) {
+    if (err) return cb(err);
+    write('.gitignore', 'gitignore', history);
   }
 
   function history(err) {
