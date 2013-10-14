@@ -37,8 +37,8 @@ prompt.get(schema, function (err, conf) {
   if (err) throw err;
   create(process.cwd(), conf, function (err, dir, files) {
     if (err) throw err;
-    files.forEach(function (file) {
-      console.log('wrote'.grey + ': '.grey + file);
-    });
+    for (var i = 0, len = files.length; i < len; i++) {
+      console.log('wrote:  '.grey + files[i]);
+    }
   });
 });
