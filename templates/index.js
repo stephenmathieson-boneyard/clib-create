@@ -2,23 +2,15 @@
 var fs = require('fs');
 var read = fs.readFileSync;
 
-var header = read(__dirname + '/header');
-var history = read(__dirname + '/history');
-var makefile = read(__dirname + '/makefile');
-var package = read(__dirname + '/package');
-var readme = read(__dirname + '/readme');
-var source = read(__dirname + '/source');
-var test = read(__dirname + '/test');
-var gitignore = read(__dirname + '/gitignore');
+var files = fs.readdirSync(__dirname).filter(function (f) {
+  return f !== 'index.js';
+});
 
-exports.header = template.bind(null, header);
-exports.history = template.bind(null, history);
-exports.makefile = template.bind(null, makefile);
-exports.package = template.bind(null, package);
-exports.readme = template.bind(null, readme);
-exports.source = template.bind(null, source);
-exports.test = template.bind(null, test);
-exports.gitignore = template.bind(null, gitignore);
+for (var i = files.length - 1; i >= 0; i--) {
+  var name = files[i];
+  var data = read(__dirname + '/' + name);
+  exports[name] = template.bind(null, data);
+}
 
 /**
  * Template `data` with `conf`
